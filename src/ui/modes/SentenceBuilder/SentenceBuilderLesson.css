@@ -1,0 +1,380 @@
+/* ===== Page background (like PictureSelection) ===== */
+.sbPage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.sbBg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.02);
+  filter: blur(0px);
+}
+
+.sbBgOverlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      circle at 30% 15%,
+      rgba(255, 255, 255, 0.55) 0%,
+      rgba(255, 255, 255, 0.20) 45%,
+      rgba(255, 255, 255, 0.10) 70%,
+      rgba(255, 255, 255, 0.18) 100%
+    ),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.22) 0%, rgba(0, 0, 0, 0.08) 100%);
+  backdrop-filter: blur(2px);
+}
+
+/* subtle sparkle layer */
+.sbSparkles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.25;
+  background-image:
+    radial-gradient(circle at 15% 30%, rgba(255,255,255,0.7) 0 2px, transparent 3px),
+    radial-gradient(circle at 80% 25%, rgba(255,255,255,0.6) 0 2px, transparent 3px),
+    radial-gradient(circle at 55% 65%, rgba(255,255,255,0.55) 0 2px, transparent 3px),
+    radial-gradient(circle at 30% 80%, rgba(255,255,255,0.5) 0 2px, transparent 3px);
+}
+
+/* Foreground content wrapper */
+.sbWrap {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 18px 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ===== Hero (kept) ===== */
+.sbHero {
+  border-radius: 18px;
+  padding: 18px 18px;
+  background: linear-gradient(180deg, #9ed0ff 0%, #d8efff 100%);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  overflow: hidden;
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.10);
+}
+
+.sbHeroLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 240px;
+}
+
+.sbH1 {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+}
+
+.sbSub {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.sbHeroRight {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 260px;
+  justify-content: flex-end;
+}
+
+.sbBubble {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 14px;
+  padding: 12px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  max-width: 360px;
+  justify-content: center;
+  align-items: center;
+  min-height: 64px;          /* optional: ensures visible centering */
+  padding: 12px 16px;        /* keep your spacing */
+}
+
+.sbBubbleLabel {
+  font-size: 13px;
+  font-weight: 800;
+  opacity: 0.65;
+  margin-bottom: 2px;
+}
+
+.sbBubbleText {
+  font-size: 16px;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.78);
+}
+
+.sbOwl {
+  width: 86px;
+  height: 86px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.sbOwlFace {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: radial-gradient(circle at 40% 35%, #ffddad 0%, #d08a52 70%);
+  border: 3px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.15);
+}
+
+.sbOwlGlasses {
+  position: absolute;
+  left: 14px;
+  top: 22px;
+  width: 58px;
+  height: 28px;
+  border-radius: 14px;
+  border: 4px solid rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.25);
+  opacity: 0.9;
+}
+
+/* ===== Cards ===== */
+.sbCard {
+  border-radius: 18px;
+  padding: 16px 16px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.10);
+}
+
+.sbCardLarge {
+  padding: 20px 20px;
+}
+
+.sbCardWide {
+  padding: 18px 18px;
+}
+
+.sbCardTitle {
+  font-size: 16px;
+  font-weight: 900;
+  opacity: 0.75;
+  margin-bottom: 12px;
+}
+
+/* ===== Sentence line ===== */
+.sbSentenceLine {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  min-height: 86px;
+}
+
+.sbSentenceLineLarge {
+  min-height: 86px;
+  padding: 12px;
+  gap: 10px;
+}
+
+.sbText {
+  font-size: 18px;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.72);
+  white-space: pre-wrap;
+}
+
+.sbTextLarge {
+  font-size: 20px;
+}
+
+.sbBlank {
+  min-width: 140px;
+  height: 44px;
+  border-radius: 12px;
+  border: 2px dashed rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.85);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+  overflow: hidden;
+}
+
+.sbBlankLarge {
+  min-width: 180px;
+  height: 52px;
+  border-radius: 14px;
+}
+
+.sbBlank.filled {
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.14);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+}
+
+.sbBlank:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.10);
+}
+
+.sbBlankPlaceholder {
+  font-size: 16px;
+  font-weight: 900;
+  opacity: 0.35;
+  letter-spacing: 0.5px;
+}
+
+.sbBlankWord {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #2e70c9 0%, #2059a9 100%);
+  color: rgba(255, 255, 255, 0.96);
+  font-weight: 900;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  user-select: none;
+}
+
+.sbBlankWord:active {
+  cursor: grabbing;
+}
+
+/* ===== Word bank ===== */
+.sbBank {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.sbChip {
+  border: 0;
+  border-radius: 14px;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.96);
+  background: linear-gradient(180deg, #2e70c9 0%, #2059a9 100%);
+  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.12);
+  cursor: grab;
+  user-select: none;
+}
+
+.sbChip:active {
+  cursor: grabbing;
+}
+
+.sbChip.selected {
+  outline: 3px solid rgba(255, 170, 0, 0.75);
+  transform: translateY(-1px);
+}
+
+/* ===== Buttons row ===== */
+.sbActionsRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.sbActionsRowWide {
+  margin-top: 16px;
+}
+
+.sbBtn {
+  border: 0;
+  border-radius: 14px;
+  padding: 12px 18px;
+  font-size: 16px;
+  font-weight: 900;
+  box-shadow: 0 16px 22px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.sbBtn.reset {
+  background: linear-gradient(180deg, #ffb14a 0%, #f07a1b 100%);
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.sbBtn.submit {
+  background: linear-gradient(180deg, #77cf66 0%, #2a9a3a 100%);
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.sbBtn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.sbHint {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  opacity: 0.65;
+}
+
+.sbOwl {
+  width: 150px;
+  height: 86px;
+  position: relative;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+}
+
+.sbOwlImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 14px 24px rgba(0,0,0,0.15));
+}
+
+
+/* Responsive */
+@media (max-width: 640px) {
+  .sbWrap {
+    padding: 14px 14px 18px;
+  }
+
+  .sbHero {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sbHeroRight {
+    justify-content: flex-start;
+  }
+
+  .sbH1 {
+    font-size: 26px;
+  }
+
+  .sbBlankLarge {
+    min-width: 140px;
+  }
+}

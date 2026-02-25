@@ -1,0 +1,136 @@
+.lessonShell {
+  height: 100vh;
+  min-height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 76px minmax(0, 1fr) 110px; /* CHANGE */
+  gap: 12px;
+  padding: 12px;
+  box-sizing: border-box;
+  overflow: hidden; /* ADD */
+}
+
+/* Header */
+.lessonHeader {
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(25, 90, 190, 0.95), rgba(15, 70, 155, 0.95));
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+.lessonTitle {
+  font-size: 26px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.95);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lessonHeaderRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lessonPill {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.25);
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 800;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.lessonIconBtn {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 20px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
+
+  display: grid;
+  place-items: center;   /* ✅ THIS centers ✓ and ⚙ perfectly */
+  padding: 0;            /* ✅ avoid browser default padding */
+  line-height: 1;        /* ✅ avoid vertical text baseline shift */
+}
+
+.lessonIconBtn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Content slot */
+.lessonContent {
+  display: grid;
+  place-items: center;
+  padding: 6px;
+  min-height: 0;
+  overflow: hidden; /* ADD */
+}
+
+.lessonContentInner {
+  width: min(1600px, 100%); /* RECOMMENDED */
+  height: 100%;
+  min-height: 0;
+  overflow: hidden; /* ADD */
+} 
+
+/* Footer */
+.lessonFooter {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 14px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 18px;
+  background: rgba(10, 20, 40, 0.10);
+}
+
+.lessonNavBtn {
+  height: 72px;
+  border-radius: 22px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  background: rgba(255, 255, 255, 0.92);
+
+  /* TEXT VISIBILITY FIX */
+  color: rgba(12, 20, 35, 0.95);
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+
+  /* Prevent inherited weirdness */
+  opacity: 1;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.6);
+
+  display: grid;
+  place-items: center;
+
+  cursor: pointer;
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.16);
+}
+
+.lessonNavBtn.primary {
+  font-size: 24px;
+  background: rgba(255, 255, 255, 0.98);
+  color: rgba(10, 18, 30, 0.98);
+}
+
+/* Disabled should still be readable */
+.lessonNavBtn:disabled {
+  opacity: 0.55; /* keep shape visible but not too faded */
+  color: rgba(12, 20, 35, 0.65); /* ensure text still visible */
+  cursor: not-allowed;
+  box-shadow: none;
+}
+

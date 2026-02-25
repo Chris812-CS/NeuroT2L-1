@@ -1,0 +1,53 @@
+.entrance-container {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: 50% 10%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Shared button style */
+.entrance-btn {
+  position: absolute;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Adjust these positions after testing visually */
+
+/* Left: Class Lesson */
+.class-btn {
+  left: 12%;
+  top: 35%;
+  width: 28%;
+  height: 45%;
+}
+
+/* Right: Personalized Portal */
+.personal-btn {
+  right: 10%;
+  top: 30%;
+  width: 30%;
+  height: 50%;
+}
+
+.entrance-btn {
+  position: absolute;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  outline: none;          /* remove focus outline */
+  box-shadow: none;       /* remove any shadow */
+  -webkit-tap-highlight-color: transparent; /* mobile tap highlight */
+}
+
+.entrance-btn:focus,
+.entrance-btn:focus-visible,
+.entrance-btn:active {
+  outline: none;
+  box-shadow: none;
+}

@@ -1,0 +1,16 @@
+{
+  "lessonId": "bubble-review-1",
+  "version": 1,
+  "title": "Bubble Review",
+  "defaults": {
+    "ui": "floatingBubble",
+    "features": { "tts": true, "speech": false, "picSelection": false }
+  },
+  "items": [
+    { "id": "vocab-bed", "type": "vocab", "content": { "word": "Bed" } },
+    { "id": "vocab-ball", "type": "vocab", "content": { "word": "Ball" } },
+    { "id": "vocab-table", "type": "vocab", "content": { "word": "Table" } },
+    { "id": "vocab-teddy", "type": "vocab", "content": { "word": "Teddy" } },
+    { "id": "vocab-bookshelf", "type": "vocab", "content": { "word": "Bookshelf" } }
+  ]
+}

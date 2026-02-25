@@ -1,0 +1,78 @@
+/* src/ui/shared/OverlayCard.css */
+
+.overlayBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 18px;
+
+  /* dim + blur like screenshot */
+  background: rgba(0, 0, 0, 0.38);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.overlayPanel {
+  width: min(1020px, 100%);
+  border-radius: 30px;
+
+  /* clean white surface */
+  background: rgba(255, 255, 255, 0.985);
+
+  /* soft big shadow */
+  box-shadow: 0 26px 80px rgba(0, 0, 0, 0.18);
+
+  padding: 18px 22px 16px;
+}
+
+.overlayContent {
+  /* keep the card spacious like screenshot */
+  padding: 6px 6px 10px;
+}
+
+.overlayActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+
+  padding: 10px 6px 2px;
+}
+
+.overlayBtn {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+
+  padding: 10px 16px;
+  border-radius: 12px;
+
+  background: rgba(15, 15, 18, 0.92);
+  color: white;
+
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+  transition: transform 120ms ease, opacity 120ms ease;
+}
+
+.overlayBtn:hover {
+  transform: translateY(-1px);
+}
+
+.overlayBtn:active {
+  transform: translateY(0px);
+  opacity: 0.9;
+}
+
+.overlayBtn:focus-visible {
+  outline: 3px solid rgba(255, 105, 180, 0.35); /* pink-ish focus */
+  outline-offset: 2px;
+}
+

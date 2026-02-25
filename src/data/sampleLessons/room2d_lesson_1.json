@@ -1,0 +1,113 @@
+{
+  "lessonId": "classroom-toys-full-v1",
+  "version": 1,
+  "title": "Classroom Toys - Full Practice",
+
+  "defaults": {
+    "ui": "room2d",
+    "features": {
+      "tts": true,
+      "speech": false,
+      "picSelection": true
+    },
+
+    "room2d": {
+      "background": "/assets/rooms/classroom_toys_v1.png",
+      "objects": [
+        {
+          "id": "toy_truck",
+          "itemId": "vocab-truck",
+          "x": 72.9,
+          "y": 62.5,
+          "w": 23.4,
+          "h": 16.6,
+          "label": "Truck"
+        },
+        {
+          "id": "dinosaur",
+          "itemId": "vocab-dinosaur",
+          "x": 83.3,
+          "y": 74.2,
+          "w": 16.3,
+          "h": 24.4,
+          "label": "Dinosaur"
+        },
+        {
+          "id": "blocks_cubes",
+          "itemId": "vocab-blocks",
+          "x": 39.7,
+          "y": 81.1,
+          "w": 23.4,
+          "h": 16.6,
+          "label": "Blocks"
+        },
+        {
+          "id": "globe",
+          "itemId": "vocab-globe",
+          "x": 9.1,
+          "y": 3.4,
+          "w": 8.5,
+          "h": 11.7,
+          "label": "Globe"
+        }
+      ]
+    },
+
+    "sentenceBuilder": {
+      "background": "/assets/rooms/classroom_toys_v1.png",
+      "tokens": [
+        { "kind": "text", "value": "I see the" },
+        { "kind": "blank", "id": "b1", "placeholder": "_____" },
+        { "kind": "text", "value": "." }
+      ],
+      "wordBank": ["truck", "dinosaur", "blocks", "globe"],
+      "answers": {
+        "b1": "truck"
+      }
+    }
+  },
+
+  "content": {
+    "picSelection": {
+      "questions": 6,
+      "choicesPerQuestion": 4,
+      "ttsOnPrompt": true,
+      "includeWordLabel": false
+    }
+  },
+
+  "items": [
+    {
+      "id": "vocab-truck",
+      "type": "vocab",
+      "content": {
+        "word": "Truck",
+        "image": "https://twemoji.maxcdn.com/v/latest/svg/1f69a.svg"
+      }
+    },
+    {
+      "id": "vocab-dinosaur",
+      "type": "vocab",
+      "content": {
+        "word": "Dinosaur",
+        "image": "https://twemoji.maxcdn.com/v/latest/svg/1f996.svg"
+      }
+    },
+    {
+      "id": "vocab-blocks",
+      "type": "vocab",
+      "content": {
+        "word": "Blocks",
+        "image": "https://twemoji.maxcdn.com/v/latest/svg/1f9f1.svg"
+      }
+    },
+    {
+      "id": "vocab-globe",
+      "type": "vocab",
+      "content": {
+        "word": "Globe",
+        "image": "https://twemoji.maxcdn.com/v/latest/svg/1f30d.svg"
+      }
+    }
+  ]
+}

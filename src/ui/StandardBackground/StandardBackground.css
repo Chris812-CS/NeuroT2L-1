@@ -1,0 +1,105 @@
+/* src\ui\background\StandardBackground.css */
+
+.std-bg {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+
+  font-family: "Fredoka", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+background:
+  radial-gradient(circle at 18% 18%, rgba(255, 236, 179, 0.85), transparent 48%),
+  radial-gradient(circle at 82% 28%, rgba(255, 214, 170, 0.75), transparent 50%),
+  radial-gradient(circle at 28% 88%, rgba(255, 248, 191, 0.90), transparent 52%),
+  linear-gradient(180deg, #fff7d6 0%, #fff1c2 55%, #ffefb8 100%);
+
+
+}
+
+.std-bg-content {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+/* Base bubble style (static) */
+.std-bg-bubble {
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+
+background:
+  radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.88),
+    rgba(255, 255, 255, 0.38) 40%,
+    rgba(255, 226, 160, 0.30) 68%,
+    rgba(255, 208, 140, 0.22) 100%
+  );
+
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  box-shadow:
+    inset 0 0 14px rgba(255, 255, 255, 0.65),
+    0 14px 30px rgba(120, 160, 200, 0.25);
+
+  opacity: 0.6;
+}
+
+/* Static placements */
+.std-bg-bubble--a {
+  width: 220px;
+  height: 220px;
+  top: 60px;
+  left: -80px;
+}
+
+.std-bg-bubble--b {
+  width: 280px;
+  height: 280px;
+  top: 140px;
+  right: -120px;
+  opacity: 0.5;
+}
+
+.std-bg-bubble--c {
+  width: 200px;
+  height: 200px;
+  bottom: 80px;
+  left: 40px;
+  opacity: 0.45;
+}
+
+.std-bg-bubble--d {
+  width: 320px;
+  height: 320px;
+  bottom: -140px;
+  right: 80px;
+  opacity: 0.35;
+}
+
+/* Phone */
+@media (max-width: 520px) {
+  .std-bg-bubble--a {
+    width: 180px;
+    height: 180px;
+    left: -70px;
+  }
+
+  .std-bg-bubble--b {
+    width: 220px;
+    height: 220px;
+    right: -110px;
+  }
+
+  .std-bg-bubble--d {
+    width: 260px;
+    height: 260px;
+    right: 40px;
+  }
+}
