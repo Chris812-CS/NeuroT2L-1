@@ -1,0 +1,65 @@
+{
+  "lessonId": "classroom-toys-hard-no-room2d-v1",
+  "version": 1,
+  "title": "Classroom Toys - Hard Practice (No Room Tap)",
+
+  "defaults": {
+    "ui": "picSelection",
+    "features": {
+      "tts": true,
+      "speech": false,
+      "picSelection": true
+    },
+
+    "sentenceBuilder": {
+      "background": "/assets/rooms/classroom_toys_v1.png",
+      "tokens": [
+        { "kind": "text", "value": "I see the" },
+        { "kind": "blank", "id": "b1", "placeholder": "_____" },
+        { "kind": "text", "value": "and the" },
+        { "kind": "blank", "id": "b2", "placeholder": "_____" },
+        { "kind": "text", "value": "." }
+      ],
+      "wordBank": [
+        "truck",
+        "dinosaur",
+        "blocks",
+        "globe",
+        "teddy",
+        "puzzle",
+        "ball",
+        "robot",
+        "book",
+        "pencil"
+      ],
+      "answers": {
+        "b1": "truck",
+        "b2": "dinosaur"
+      }
+    }
+  },
+
+  "content": {
+    "picSelection": {
+      "questions": 12,
+      "choicesPerQuestion": 6,
+      "ttsOnPrompt": false,
+      "includeWordLabel": false
+    }
+  },
+
+  "items": [
+    { "id": "vocab-truck", "type": "vocab", "content": { "word": "Truck", "image": "https://twemoji.maxcdn.com/v/latest/svg/1f69a.svg" } },
+    { "id": "vocab-dinosaur", "type": "vocab", "content": { "word": "Dinosaur", "image": "https://twemoji.maxcdn.com/v/latest/svg/1f996.svg" } },
+    { "id": "vocab-blocks", "type": "vocab", "content": { "word": "Blocks", "image": "https://twemoji.maxcdn.com/v/latest/svg/1f9f1.svg" } },
+    { "id": "vocab-globe", "type": "vocab", "content": { "word": "Globe", "image": "https://twemoji.maxcdn.com/v/latest/svg/1f30d.svg" } },
+
+    { "id": "vocab-teddy", "type": "vocab", "content": { "word": "Teddy", "image": "https://twemoji.maxcdn.com/v/latest/svg/1f9f8.svg" } },
+    { "id": "vocab-puzzle", "type": "vocab", "content": { "word": "Puzzle", "image": "https://twemoji.maxcdn.com/v/latest/svg/1f9e9.svg" } },
+    { "id": "vocab-ball", "type": "vocab", "content": { "word": "Ball", "image": "https://twemoji.maxcdn.com/v/latest/svg/26bd.svg" } },
+    { "id": "vocab-robot", "type": "vocab", "content": { "word": "Robot", "image": "https://twemoji.maxcdn.com/v/latest/svg/1f916.svg" } },
+
+    { "id": "vocab-book", "type": "vocab", "content": { "word": "Book", "image": "https://twemoji.maxcdn.com/v/latest/svg/1f4d6.svg" } },
+    { "id": "vocab-pencil", "type": "vocab", "content": { "word": "Pencil", "image": "https://twemoji.maxcdn.com/v/latest/svg/270f.svg" } }
+  ]
+}

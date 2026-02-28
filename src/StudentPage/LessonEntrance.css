@@ -10,19 +10,15 @@
 /* Shared button style */
 .entrance-btn {
   position: absolute;
-  background: transparent;
   border: none;
+  padding: 0;
   cursor: pointer;
-}
+  z-index: 9999;
+  pointer-events: auto;
 
-/* Adjust these positions after testing visually */
-
-/* Left: Class Lesson */
-.class-btn {
-  left: 12%;
-  top: 35%;
-  width: 28%;
-  height: 45%;
+  /* force visible for debug */
+  background: transparent; /* semi-transparent red for debugging */
+  outline: transparent;
 }
 
 /* Right: Personalized Portal */
@@ -33,21 +29,22 @@
   height: 50%;
 }
 
-.entrance-btn {
-  position: absolute;
-  background: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-
-  outline: none;          /* remove focus outline */
-  box-shadow: none;       /* remove any shadow */
-  -webkit-tap-highlight-color: transparent; /* mobile tap highlight */
-}
-
 .entrance-btn:focus,
 .entrance-btn:focus-visible,
 .entrance-btn:active {
   outline: none;
   box-shadow: none;
 }
+
+.entrance-btn {
+  -webkit-tap-highlight-color: transparent; /* mobile */
+}
+
+.class-btn{
+  left: 10%;
+  top: 30%;
+  width: 30%;
+  height: 50%;
+}
+.personal-btn { right: 10%; top: 45%; width: 30%; height: 15%; }
+.personal-btn-2 { right: 10%; top: 60%; width: 30%; height: 15%; } /* adjust */
